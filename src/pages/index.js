@@ -18,7 +18,7 @@ export default function Home() {
                 className="text-6xl font-bold text-left"
               />
               <p className="my-4 text-base font-medium">
-                In today's fast-paced digital world, businesses need web
+                In today&rsquo;s fast-paced digital world, businesses need web
                 applications that can keep up with their evolving needs. As a
                 full-stack developer, I specialize in developing custom web
                 solutions that are scalable, reliable, and user-friendly.
