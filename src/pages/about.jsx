@@ -78,7 +78,7 @@ const about = () => {
                 development, I love building websites and web applications from
                 the ground up.
                 <br />
-                When I'm not coding, you can find me diving into various topics
+                When I&rsquo;m not coding, you can find me diving into various topics
                 such as music, psychology, economics, and powerlifting. I
                 believe that a well-rounded perspective is key to understanding
                 and developing innovative solutions.
@@ -90,7 +90,7 @@ const about = () => {
                 <br />
                 Above all, I am passionate about collaborating with like-minded
                 individuals who share my dedication to creating valuable and
-                enjoyable experiences for users. Let'&rsquo;s build something great
+                enjoyable experiences for users. Let&rsquo;s build something great
                 together!
               </p>
             </div>
