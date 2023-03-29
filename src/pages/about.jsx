@@ -1,5 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
@@ -71,7 +72,7 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium mt-4">
-                Hi there! My name is [nombre] and I am a Fullstack Web Developer
+                Hi there! My name is Jonathan Daniel Arce and I am a Fullstack Web Developer
                 with a passion for creating robust and user-friendly
                 applications. With experience in both front-end and back-end
                 development, I love building websites and web applications from
@@ -89,7 +90,7 @@ const about = () => {
                 <br />
                 Above all, I am passionate about collaborating with like-minded
                 individuals who share my dedication to creating valuable and
-                enjoyable experiences for users. Let's build something great
+                enjoyable experiences for users. Let'&rsquo;s build something great
                 together!
               </p>
             </div>
@@ -98,6 +99,7 @@ const about = () => {
               <Image src={ProfilePic} className="w-full h-auto rounded-lg" />
             </div>
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
