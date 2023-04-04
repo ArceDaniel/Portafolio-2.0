@@ -6,9 +6,10 @@ const Skill = ({ name, x, y }) => {
     <motion.div
       className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark absolute cursor-pointer"
       whileHover={{ scale: 1.05, cursor: "pointer" }}
-      initial={{ x: 0, y: 0 }}  
-      animate={{ x: x, y: y }}
+      initial={{ x: 0, y: 0 }}
+      whileInView={{ x: x, y: y }}
       transition={{ duration: 1 }}
+      viewport={{ once: true }}
     >
       {name}
     </motion.div>
@@ -21,7 +22,8 @@ const Skills = () => {
       <h2 className="font-bold text-8xl mt-6 w-full text-center">Skills</h2>
       <div
         className="w-full h-screen relative flex items-center justify-center 
-        rounded-full bg-circularLight" >
+        rounded-full bg-circularLight"
+      >
         <motion.div
           className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark"
           whileHover={{ scale: 1.05, cursor: "pointer" }}
@@ -43,7 +45,7 @@ const Skills = () => {
         <Skill name="SQL" x="-60vh" y="-10vh" />
         <Skill name="Tailwind" x="-70vh" y="30vh" />
         <Skill name="Git" x="-70vh" y="-20vh" />
-        </div>
+      </div>
     </>
   );
 };

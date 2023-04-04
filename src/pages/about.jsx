@@ -5,6 +5,8 @@ import Head from "next/head";
 import Image from "next/image";
 import ProfilePic from "../../public/images/profile/developer-pic.jpg";
 import AnimateNumbers from "@/components/AnimateNumbers";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const about = () => {
   return (
@@ -76,6 +78,8 @@ const about = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>

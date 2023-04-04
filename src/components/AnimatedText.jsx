@@ -31,7 +31,7 @@ const AnimatedText = ({ className = "", text }) => {
   return (
     <div className="w-full mx-auto py-2 items-center justify-center text-center overflow-hidden">
       <motion.h1
-        className={`inline-block w-full text-dark font-bold capitalize text-4x1 ${className}`}
+        className={`inline-block w-full text-dark font-bold capitalize text-4xl ${className}`}
         variants={quote}
         initial="initial"
         animate="animate"
