@@ -46,18 +46,18 @@ const about = () => {
               </div>
             </div>
             <div className="col-span-4 flex flex-col items-center justify-center">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75  dark:text-light">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75  dark:text-light/75">
                 Biography
               </h2>
               <p className="font-medium mt-4">
-                Hi there! My name is Jonathan Daniel Arce and I am a Fullstack Web Developer
-                with a passion for creating robust and user-friendly
-                applications. With experience in both front-end and back-end
-                development, I love building websites and web applications from
-                the ground up.
+                Hi there! My name is Jonathan Daniel Arce and I am a Fullstack
+                Web Developer with a passion for creating robust and
+                user-friendly applications. With experience in both front-end
+                and back-end development, I love building websites and web
+                applications from the ground up.
                 <br />
-                When I&rsquo;m not coding, you can find me diving into various topics
-                such as music, psychology, economics, and powerlifting. I
+                When I&rsquo;m not coding, you can find me diving into various
+                topics such as music, psychology, economics, and powerlifting. I
                 believe that a well-rounded perspective is key to understanding
                 and developing innovative solutions.
                 <br />
@@ -68,8 +68,8 @@ const about = () => {
                 <br />
                 Above all, I am passionate about collaborating with like-minded
                 individuals who share my dedication to creating valuable and
-                enjoyable experiences for users. Let&rsquo;s build something great
-                together!
+                enjoyable experiences for users. Let&rsquo;s build something
+                great together!
               </p>
             </div>
             <div className="col-span-4 relative h-max rounded-lg border-2 boder-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
