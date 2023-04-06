@@ -4,10 +4,15 @@ import GithubIcon from "./icons/GitHub";
 import LinkedInIcon from "./icons/LinkedInIcon";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import SunIcon from "./icons/SunIcon";
+import MoonIcon from "./icons/MoonIcon";
 
 
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
@@ -30,10 +35,27 @@ const NavBar = () => {
         >
           <GithubIcon />
         </motion.a>
+        <button
+        onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+        >
+            {
+                mode === 'dark' ? (
+                    <SunIcon 
+                    className="w-6 h-6 mx-4 fill-dark"
+                    />
+                ) : (
+                   <MoonIcon 
+                   className="w-6 h-6 mx-4 fill-dark"
+                   
+                   />
+                )
+            }
+        </button>
+
       </nav>
-      <nav className="absolute left-[50%] translate-x-[-50%]">
+      <div className="absolute left-[50%] translate-x-[-50%]">
         <Logo />
-      </nav>
+      </div>
     </header>
   );
 };

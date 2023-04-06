@@ -23,8 +23,10 @@ const FeaturedProjects = ({ type, title, summary, img, link, gitHub }) => {
     <article
       className="w-full flex items-center justify-between
         border border-solid border-dark rounded-3xl bg-light 
-        shadow-2xl overflow-hidden p-12"
+        p-12 relative"
     >
+      <div className="absolute top-0  shadow-2xl -right-3 -z-10 w-[101%] h-[102%] rounded-3xl bg-dark" />
+
       <Link
         href={link}
         target="_blank"
@@ -66,7 +68,12 @@ const FeaturedProjects = ({ type, title, summary, img, link, gitHub }) => {
 
 const Project = ({ type, title, summary, img, link, gitHub }) => {
   return (
-    <article>
+    <article
+      className="w-full flex flex-col items-center justify-center
+    border rounded-2xl border-solid border-dark bg-light p-6 relative"
+    >
+      <div className="absolute top-0  shadow-2xl -right-3 -z-10 w-[102%] h-[102%] rounded-3xl bg-dark/75" />
+
       <Link
         href={link}
         target="_blank"
@@ -77,7 +84,7 @@ const Project = ({ type, title, summary, img, link, gitHub }) => {
       </Link>
       <div
         className="flex w-full flex-col items-start
-            justify-between pl-6"
+            justify-between mt-4"
       >
         <span className="font-medium text-xl text-primary">{type}</span>
         <Link
@@ -85,20 +92,19 @@ const Project = ({ type, title, summary, img, link, gitHub }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full tect-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full tect-left text-3xl font-bold">{title}</h2>
         </Link>
         <p className="text-dark/75 my-2 font-medium">{summary}</p>
-        <div className="mt-2 flex items-center w-full">
-          <Link href={gitHub} target="_blank" className="w-10 h-10 mr-4">
-            <GithubIcon />
-          </Link>
+        <div className="mt-4 flex items-center w-full justify-between">
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light 
-          p-2 px-6 text-lg font-semibold hover:bg-primary"
+            className="ml-4 text-lg font-semibold  hover:underline"
           >
             Visit
+          </Link>
+          <Link href={gitHub} target="_blank" className="w-10 h-10 mr-4">
+            <GithubIcon />
           </Link>
         </div>
       </div>
@@ -114,9 +120,9 @@ const projects = () => {
         <meta name="description" content="Project page" />
       </Head>
       <main className="flex w-full flex-col mb-16 items-center justify-center">
-        <Layout className="pt-16">
+        <Layout className="pt-16 flex flex-col items-center ">
           <AnimatedText
-            className="mb-16"
+            className="my-20 relative text-8xl "
             text={"Imagination Trumps Knowledge!"}
           />
           <div className="grid grid-cols-12 gap-24">
@@ -144,7 +150,7 @@ const projects = () => {
               />
             </div>
             <div className="col-span-6">
-            <Project
+              <Project
                 type="React"
                 title="React Portfolio"
                 summary="This is my portfolio website built with React and Next.js"
@@ -153,9 +159,39 @@ const projects = () => {
                 img={ProfilePic}
               />
             </div>
-            <div className="col-span-12">Featured Projects</div>
-            <div className="col-span-6">Projects-3</div>
-            <div className="col-span-6">Projects-4</div>
+            <div className="col-span-12">
+              {featuredProjects.map((project, index) => (
+                <FeaturedProjects
+                  key={index}
+                  type={project.type}
+                  title={project.title}
+                  summary={project.summary}
+                  img={project.img}
+                  link={project.link}
+                  gitHub={project.gitHub}
+                />
+              ))}
+            </div>
+            <div className="col-span-6">
+              <Project
+                type="React"
+                title="React Portfolio"
+                summary="This is my portfolio website built with React and Next.js"
+                link="https://arcedaniel.com"
+                gitHub="   "
+                img={ProfilePic}
+              />
+            </div>
+            <div className="col-span-6">
+              <Project
+                type="React"
+                title="React Portfolio"
+                summary="This is my portfolio website built with React and Next.js"
+                link="https://arcedaniel.com"
+                gitHub="   "
+                img={ProfilePic}
+              />
+            </div>
           </div>
         </Layout>
       </main>
