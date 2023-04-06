@@ -10,14 +10,15 @@ const HireMe = () => {
     "
     >
       <div className="w-36 h-auto flex items-center justify-center relative">
-        <CirculeText className="fill-dark animate-spin-slow" />
+        <CirculeText className="fill-dark animate-spin-slow
+        dark:fill-light" />
         <Link
           href="mailto:jonathandanielarce9@gmail.com"
           className="flex items-center justify-center absolute left-1/2 top-1/2 transform
            -translate-x-1/2 -translate-y-1/2 bg-dark
         text-light shadow-md border-solid border-2 border-dark rounded-full w-20 h-20
         font-bold hover:bg-light hover:text-dark
-        "
+        dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light"
         >
           Hire Me
         </Link>

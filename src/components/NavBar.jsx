@@ -14,7 +14,8 @@ const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between
+    dark:text-light">
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
@@ -36,16 +37,20 @@ const NavBar = () => {
           <GithubIcon />
         </motion.a>
         <button
+        className={`
+        ml-3 flex items-center justify-center rounded-full
+        p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}
+        `}
         onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
         >
             {
                 mode === 'dark' ? (
                     <SunIcon 
-                    className="w-6 h-6 mx-4 fill-dark"
+                    className=" fill-dark"
                     />
                 ) : (
                    <MoonIcon 
-                   className="w-6 h-6 mx-4 fill-dark"
+                   className=" fill-dark"
                    
                    />
                 )
