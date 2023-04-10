@@ -10,13 +10,17 @@ export default function Home() {
   return (
     <>
       <main className="flex items-center text-dark w-full min-h-screen
-      dark:text-light 2xl:">
-        <Layout className="pt-0">
-          <div className="flex items-center justify-between w-full">
-            <div className="w.1/2 flex flex-col items-center self-center">
+      dark:text-light">
+        <Layout className="pt-0 lg:mt-0 md:pt-16 sm:pt-8 sm:!p-4">
+          <div className="flex items-center justify-between w-full
+           lg:flex-col-reverse">
+            <div className="w-1/2 flex flex-col items-center self-center
+            lg:w-full lg:text-center">
               <AnimatedText
                 text="Full Stack Solutions for Modern Businesses"
-                className="text-6xl font-bold text-left"
+                className="text-6xl font-bold text-left 
+                xl:!text-5xl lg:!text-center lg:!text:6xl md:!text-5xl
+                sm:!text-4xl xs:!text-3xl"
               />
               <p className="my-4 text-base font-medium">
                 In today&rsquo;s fast-paced digital world, businesses need web
@@ -26,7 +30,8 @@ export default function Home() {
                 Explore my portfolio and see how I can help your business
                 thrive.
               </p>
-              <div className="flex items-centers mt-2 self-center justify-center gap-5">
+              <div className="flex items-centers mt-2 self-center justify-center gap-5
+              lg:self-center">
                 <Link
                   target={"_blank"}
                   href="/CV.pdf"
@@ -49,11 +54,11 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="w-[120%]">
+            <div className="w-1/2 lg:w-full flex justify-center">
               <Image
                 src={profile}
                 alt="Arce Daniel"
-                className="w-full h-auto"
+                className="w-full h-auto md:inline-block lg:w-[70%]"
                 priority
                 sizes="(max-width: 768px) 100vw,
                 (max-width: 1024px) 50vw,
