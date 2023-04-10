@@ -31,6 +31,9 @@ module.exports = {
 
         xs: { max: "479px" },
         // => @media (max-width: 479px) { ... }
+
+        xxs: { max: "320px" },
+        // => @media (max-width: 320px) { ... }
       },
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],

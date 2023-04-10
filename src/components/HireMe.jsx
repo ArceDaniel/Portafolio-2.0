@@ -7,7 +7,7 @@ const HireMe = () => {
     <div
       className="fixed left-4 bottom-4 flex items-center justify-center
     overflow-hidden cursor-pointer
-    md:right-8 md:left-auto md:top-1 md:bottom-auto md:z-50"
+    md:right-8 md:left-auto md:top-2 md:bottom-auto md:z-50"
     >
       <div className="w-36 h-auto flex items-center justify-center relative
       md:w-24 xs:w-20">
