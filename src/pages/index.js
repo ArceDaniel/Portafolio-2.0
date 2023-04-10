@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <main className="flex items-center text-dark w-full min-h-screen
-      dark:text-light">
+      dark:text-light 2xl:">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w.1/2 flex flex-col items-center self-center">
@@ -54,6 +54,10 @@ export default function Home() {
                 src={profile}
                 alt="Arce Daniel"
                 className="w-full h-auto"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1024px) 50vw,
+                50vw"
               />
             </div>
           </div>

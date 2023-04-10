@@ -13,6 +13,25 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        "2xl": { max: "1535px" },
+        // => @media (max-width: 1535px) { ... }
+
+        xl: { max: "1279px" },
+        // => @media (max-width: 1279px) { ... }
+
+        lg: { max: "1023px" },
+        // => @media (max-width: 1023px) { ... }
+
+        md: { max: "767px" },
+        // => @media (max-width: 767px) { ... }
+
+        sm: { max: "639px" },
+        // => @media (max-width: 639px) { ... }
+
+        xs: { max: "479px" },
+        // => @media (max-width: 479px) { ... }
+      },
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
@@ -29,7 +48,7 @@ module.exports = {
         circularLight:
           "repeating-radial-gradient(rgb(0,0,0,04) 2px , #f5f5f5 5px, #f5f5f5 100px)",
         circularDark:
-          "repeating-radial-gradient(rgb(0,0,0,04) 2px , #1b1b1b 5px, #1b1b1b 100px)"
+          "repeating-radial-gradient(#FF8000 2px , #1b1b1b 5px, #1b1b1b 100px)",
       },
     },
   },

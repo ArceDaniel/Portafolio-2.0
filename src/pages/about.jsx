@@ -74,7 +74,14 @@ const about = () => {
             </div>
             <div className="col-span-4 relative h-max rounded-lg border-2 boder-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-lg bg-dark  dark:bg-light" />
-              <Image src={ProfilePic} className="w-full h-auto rounded-lg" />
+              <Image
+                src={ProfilePic}
+                className="w-full h-auto rounded-lg"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  50vw"
+              />
             </div>
           </div>
           <Skills />

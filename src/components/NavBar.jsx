@@ -8,56 +8,81 @@ import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import SunIcon from "./icons/SunIcon";
 import MoonIcon from "./icons/MoonIcon";
 
-
-
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const handleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light">
-      <nav>
+    <header
+      className="fixed top-0 z-20 bg-light/75 w-full px-32 py-8 font-medium flex items-center justify-between
+    dark:text-light dark:bg-dark/75"
+      onClick={handleMenu}
+    >
+      <button className="flex-col justify-center items-center
+      hidden lg:flex">
+        <span
+          className={`bg-dark dark:bg-light block w-6 h-0.5 rounded-sm 
+        transition-transform duration-300 ease-out
+        ${isMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
+        />
+        <span
+          className={`bg-dark dark:bg-light block w-6 h-0.5 rounded-sm my-0.5
+        transition-transform duration-300 ease-out
+        ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+        />
+        <span
+          className={`bg-dark dark:bg-light block w-6 h-0.5 rounded-sm translate-y-0.5 
+        transition-transform duration-300 ease-out
+        
+        ${isMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
+        />
+      </button>
+    <div className="w-full flex justify-between items-center
+    lg:hidden">
+    <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="ml-4" />
       </nav>
-      <nav className="flex items-center justify-center flex-wrap">
-        <motion.a href="https://www.linkedin.com/in/jonathandanielarce/" target={"_blank"}
-        className="mx-4 w-8 h-8"
-        whileHover={{ y: -5 }}
-        whileTap={{ scale: 0.9 }}
+      <nav className="z-20 flex items-center justify-center flex-wrap">
+        <motion.a
+          href="https://www.linkedin.com/in/jonathandanielarce/"
+          target={"_blank"}
+          className="mx-4 w-8 h-8"
+          whileHover={{ y: -5 }}
+          whileTap={{ scale: 0.9 }}
         >
           <LinkedInIcon />
         </motion.a>
-        <motion.a href="https://github.com/ArceDaniel" target={"_blank"}
-         className="mx-4 w-8 h-8"
-         whileHover={{ y: -5 }}
-         whileTap={{ scale: 0.9 }}
+        <motion.a
+          href="https://github.com/ArceDaniel"
+          target={"_blank"}
+          className="mx-4 w-8 h-8"
+          whileHover={{ y: -5 }}
+          whileTap={{ scale: 0.9 }}
         >
           <GithubIcon />
         </motion.a>
         <button
-        className={`
+          className={`
         ml-3 flex items-center justify-center rounded-full
-        p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}
+        p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
         `}
-        onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
         >
-            {
-                mode === 'dark' ? (
-                    <SunIcon 
-                    className=" fill-dark"
-                    />
-                ) : (
-                   <MoonIcon 
-                   className=" fill-dark"
-                   
-                   />
-                )
-            }
+          {mode === "dark" ? (
+            <SunIcon className=" fill-dark" />
+          ) : (
+            <MoonIcon className=" fill-dark" />
+          )}
         </button>
-
       </nav>
+
+    </div>
       <div className="absolute left-[50%] translate-x-[-50%]">
         <Logo />
       </div>

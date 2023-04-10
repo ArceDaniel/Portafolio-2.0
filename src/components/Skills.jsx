@@ -8,8 +8,13 @@ const Skill = ({ name, x, y }) => {
       dark:bg-light dark:text-dark dark:shadow-light absolute cursor-pointer"
       whileHover={{ scale: 1.05, cursor: "pointer" }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y }}
-      transition={{ duration: 1 }}
+      whileInView={{
+        x: x,
+        y: y,
+        transition: {
+          duration: 1.5,
+        },
+      }}
       viewport={{ once: true }}
     >
       {name}

@@ -63,7 +63,8 @@ const Details = ({ type, time, place, info }) => {
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl">{type}&nbsp;</h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-dark/75
+        dark:text-light/75">
           {time} | {place}
         </span>
         <p className="font-medium w-full">{info}</p>

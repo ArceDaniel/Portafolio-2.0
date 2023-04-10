@@ -64,11 +64,13 @@ const Details = ({ positions, company, companyLink, time, work }) => {
       >
         <h3 className="capitalize font-bold text-2xl">
           {positions}&nbsp;{" "}
-          <a href={companyLink} target="_blank" className="text-primary">
+          <a href={companyLink} target="_blank" className="text-primary dark:text-primaryDark">
             @ {company}
           </a>
         </h3>
-        <span className="capitalize font-medium text-dark/75">{time}</span>
+        <span className="capitalize font-medium text-dark/75
+        dark:text-light/75"
+        >{time}</span>
         <p className="font-medium w-full">{work}</p>
       </motion.div>
     </li>
@@ -93,7 +95,7 @@ const Experience = () => {
             scaleY: scrollYProgress,
           }}
           className="absolute left-9 top-0 w-[4px] h-full
-        bg-dark origin-top "
+        bg-dark origin-top dark:bg-light"
         />
         <ul className="w-full flex flex-col items-center justify-between ml-4">
           {Experiences.map((experience, index) => {
