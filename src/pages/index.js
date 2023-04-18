@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <main className="flex items-center text-dark w-full min-h-screen
       dark:text-light">
-        <Layout className="lg:mt-0 md:pt-16 sm:pt-8 sm:!p-4">
+        <Layout className="lg:mt-0 md:pt-16 sm:pt-8 sm:!p-4 xs:pt-20">
           <div className="flex items-center justify-between w-full
            lg:flex-col-reverse">
             <div className="w-1/2 flex flex-col items-center self-center
