@@ -1,57 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Tech from "./data/skills";
 
-const Skill = ({ name, x, y }) => {
+const Skill = ({ name, url }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark 
-      dark:bg-light dark:text-dark dark:shadow-light absolute cursor-pointer"
-      whileHover={{ scale: 1.05, cursor: "pointer" }}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{
-        x: x,
-        y: y,
-        transition: {
-          duration: 1.5,
-        },
-      }}
-      viewport={{ once: true }}
+      className="w-32 h-40 bg-light dark:bg-dark rounded-md 
+      shadow-md relative border border-dark dark:border-light
+      flex flex-col items-center justify-center
+      cursor-pointer hover:shadow-xl md:w-28 md:h-36 sm:w-24 sm:h-32 xs:w-20 xs:h-28 xxs:w-16 xxs:h-24 "
+      // whileHover={{ scale: 1.1 }}
+      // whileTap={{ scale: 0.9 }}
     >
-      {name}
+      <img src={url} alt={name} className="w-[90%] " />
+      <h2
+      className="text-dark dark:text-light font-semibold text-sm mt-2 md:text-xs sm:text-xs xs:text-xs xxs:text-xs"
+      >{name}</h2>
+      <div className="absolute top-0 -right-2 -z-10 w-[100%] h-[102%] rounded-lg bg-dark  dark:bg-light" />
+
     </motion.div>
+
   );
 };
 
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-6 w-full text-center">Skills</h2>
+      <h2 className="font-bold text-8xl mt-16 w-full text-center md:text-6xl
+      md:mt-12">Skills</h2>
       <div
-        className="w-full h-screen relative flex items-center justify-center 
-        rounded-full bg-circularLight dark:bg-circularDark"
+        className="w-full flex flex-wrap gap-8 p-4 py-8 justify-center mt-16 rounded-md 
+        "
       >
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark
-          dark:bg-light dark:text-dark dark:shadow-light absolute cursor-pointer"
-          whileHover={{ scale: 1.05, cursor: "pointer" }}
-        >
-          web
-        </motion.div>
-        <Skill name="ReactJS" x="-35vh" y="-35vh" />
-        <Skill name="JavaScript" x="7vh" y="-28vh" />
-        <Skill name="TypeScript" x="-25vh" y="25vh" />
-        <Skill name="NodeJS" x="38vh" y="20vh" />
-        <Skill name="Express" x="25vh" y="30vh" />
-        <Skill name="NestJS" x="17vh" y="-10vh" />
-        <Skill name="NextJS" x="-26vh" y="-15vh" />
-        <Skill name="Vite" x="50vh" y="-30vh" />
-        <Skill name="Docker" x="45vh" y="40vh" />
-        <Skill name="Graphql" x="55vh" y="-10vh" />
-        <Skill name="no SQL" x="65vh" y="0vh" />
-        <Skill name="Azure" x="-75vh" y="15vh" />
-        <Skill name="SQL" x="-60vh" y="-10vh" />
-        <Skill name="Tailwind" x="-70vh" y="30vh" />
-        <Skill name="Git" x="-70vh" y="-20vh" />
+        {
+          Tech.map((skill, index) => (
+            <Skill key={index} name={skill.name} url={skill.url} />
+          ))
+        }
       </div>
     </>
   );

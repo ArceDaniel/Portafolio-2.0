@@ -16,12 +16,12 @@ const about = () => {
         <meta name="description" content="About page" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
-        <Layout className="pt-16  md:pt-16 sm:pt-8 sm:!p-4">
+        <Layout className="pt-20 md:pt-18 sm:pt-8 sm:!p-4 md:!mt-24">
           <AnimatedText
             text="About Me"
-            className="text-8xl font-bold mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4-l sm:mb-8"
+            className="text-8xl text-center font-bold mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4-l sm:mb-8"
           />
-          <div className="grid w-full grid-cols-8 gap-12">
+          <div className="grid w-full grid-cols-8 gap-12 sm:gap-8">
             <div className="col-span-5 flex flex-col items-center justify-center
             md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75  dark:text-light/75">
@@ -63,29 +63,31 @@ const about = () => {
               />
             </div>
             <div className="col-span-8 flex flex-wrap items-end justify-between mb-3 
-            mt-6
-            md:order-3 md:gap-5">
+            mt-6 md:order-3 md:gap-5 xs:flex-col xs:items-center">
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block  text-7xl  font-bold">
+                <span className="inline-block  text-7xl  font-bold md:text-6xl sm:text-5xl xs:text-7xl">
                   <AnimateNumbers value={10} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75  dark:text-light/75">
+                <h2 className="text-xl text-center font-medium capitalize text-dark/75  dark:text-light/75 
+                md:text-sm xs:text-xl">
                   sastified clients
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block  text-7xl  font-bold">
+                <span className="inline-block  text-7xl  font-bold md:text-6xl sm:text-5xl xs:text-7xl">
                   <AnimateNumbers value={20} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75  dark:text-light/75">
+                <h2 className="text-xl text-center font-medium capitalize text-dark/75  dark:text-light/75 
+                md:text-sm xs:text-xl">
                   projects completed
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-7xl">
                   <AnimateNumbers value={1} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75  dark:text-light/75">
+                <h2 className="text-xl text-center font-medium capitalize text-dark/75  dark:text-light/75 
+                md:text-sm xs:text-xl">
                   years of experience
                 </h2>
               </div>
@@ -93,7 +95,7 @@ const about = () => {
           </div>
           <Skills />
           <Experience />
-          <Education />
+          {/* <Education /> */}
         </Layout>
       </main>
     </>
