@@ -212,7 +212,7 @@ const projects = () => {
                 />
               ))}
             </div>
-            {projects.map((project, index) => (
+            {project.map((project, index) => (
               <div className="col-span-6 md:col-span-12" key={index}>
                 <Project
                   type={project.type}
