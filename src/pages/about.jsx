@@ -12,8 +12,8 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>Arce Daniel | About Page</title>
-        <meta name="description" content="About page" />
+        <title>Arce Daniel | Full Stack Developer | About Page</title>
+        <meta name="description" content="As a self-taught Full Stack Developer, I have acquired solid skills in technologies such as MERN and PERN stacks, as well as Firebase, Redux, Vite, Next, and Nest. With experience leading and organizing team projects using Agile methodologies, I am dedicated to constantly expanding my knowledge and skills to provide innovative and efficient solutions. Learn more about my background and expertise as a Full Stack Developer here." />
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-20 md:pt-18 sm:pt-8 sm:!p-4 md:!mt-24">

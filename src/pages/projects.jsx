@@ -188,7 +188,7 @@ const projects = () => {
     <>
       <Head>
         <title>Arce Daniel | Project Page</title>
-        <meta name="description" content="Project page" />
+        <meta name="description" content="Our latest project showcases our expertise in developing scalable and efficient applications using MERN and PERN stacks, as well as Firebase. With a focus on using agile methodologies and Git for version control, we were able to successfully deliver a high-quality solution that exceeded our client's expectations. See how we can help you achieve your goals with our full stack development services." />
       </Head>
       <main className="flex w-full flex-col mb-16 items-center justify-center dark:text-light">
         <Layout className="pt-16 flex flex-col items-center sm:!p-4 sm:!pt-32">

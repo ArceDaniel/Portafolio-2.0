@@ -79,7 +79,7 @@ const Education = () => {
           }}
           className="absolute left-9 top-0 w-[4px] h-full
           md:w-[2px] md:left-[30px] xs:left-[20px] xs:w-[1px]
-        bg-dark origin-top "
+        bg-dark origin-top dark:bg-light"
         />
         <ul className="w-full flex flex-col items-center justify-between ml-4  xs:ml-2">
           {Educations.map((Education, index) => {
