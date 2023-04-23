@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import AllSport from "../../public/images/projects/allsport.png";
+import Dogs from "../../public/images/projects/dogs.png";
+import Psiconnect from "../../public/images/projects/psiconnect.png";
 
 const featuredProjects = [
   {
@@ -18,6 +20,25 @@ const featuredProjects = [
     img: AllSport,
   },
 ];
+
+const project = [
+  {
+    type: "Psiconnect",
+    title: "web application for psychologists and patients",
+    summary:"in this academically developed web application you can find a psychologist and make an appointment with him, also as a psychologist you can publicize your services",
+    link: "https://psiconnect.vercel.app/",
+    gitHub: "https://github.com/Psiconnect",
+    img: Psiconnect,
+  },
+  {
+    type: "Dogs",
+    title: "web application to search for dog breeds",
+    summary: "In this academically developed web application you can search for dog breeds and see their characteristics, also you can create your own dog",
+    link: "https://dogy.vercel.app/",
+    gitHub: "https://github.com/ArceDaniel/DOG-PI",
+    img: Dogs,
+  },
+]
 
 const FeaturedProjects = ({ type, title, summary, img, link, gitHub }) => {
   return (
@@ -191,16 +212,18 @@ const projects = () => {
                 />
               ))}
             </div>
-            <div className="col-span-6 md:col-span-12">
-              <Project
-                type="React"
-                title="React Portfolio"
-                summary="This is my portfolio website built with React and Next.js"
-                link="https://arcedaniel.com"
-                gitHub="   "
-                img={AllSport}
-              />
-            </div>
+            {projects.map((project, index) => (
+              <div className="col-span-6 md:col-span-12" key={index}>
+                <Project
+                  type={project.type}
+                  title={project.title}
+                  summary={project.summary}
+                  img={project.img}
+                  link={project.link}
+                  gitHub={project.gitHub}
+                />
+              </div>
+            ))}
           </div>
         </Layout>
       </main>
