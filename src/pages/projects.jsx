@@ -191,7 +191,7 @@ const projects = () => {
         <meta name="description" content="Our latest project showcases our expertise in developing scalable and efficient applications using MERN and PERN stacks, as well as Firebase. With a focus on using agile methodologies and Git for version control, we were able to successfully deliver a high-quality solution that exceeded our client's expectations. See how we can help you achieve your goals with our full stack development services." />
       </Head>
       <main className="flex w-full flex-col mb-16 items-center justify-center dark:text-light">
-        <Layout className="pt-16 flex flex-col items-center sm:!p-4 sm:!pt-32">
+        <Layout className="flex pt-20 flex-col items-center sm:!p-4 sm:!pt-32">
           <AnimatedText
             className={
               "text-8xl text-center font-bold mb-40 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"

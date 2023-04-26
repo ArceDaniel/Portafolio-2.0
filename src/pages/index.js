@@ -9,13 +9,19 @@ import profile from "../../public/images/profile/yo.png";
 export default function Home() {
   return (
     <>
-      <main className="flex items-center text-dark w-full min-h-screen
-      dark:text-light">
-        <Layout className="lg:mt-0 md:pt-16 sm:pt-8 sm:!p-4 xs:pt-20">
-          <div className="flex items-center justify-between w-full
-           lg:flex-col-reverse">
-            <div className="w-1/2 flex flex-col items-center self-center
-            lg:w-full lg:text-center">
+      <main
+        className="flex items-center text-dark w-full min-h-screen
+      dark:text-light"
+      >
+        <Layout className="lg:mt-0 md:pt-16  sm:!p-4 sm:pt-12 xs:pt-20">
+          <div
+            className="flex items-center justify-between w-full
+           lg:flex-col-reverse"
+          >
+            <div
+              className="w-1/2 flex flex-col items-center self-center
+            lg:w-full lg:text-center"
+            >
               <AnimatedText
                 text="Full Stack Solutions for Modern Businesses"
                 className="text-6xl font-bold text-left 
@@ -30,8 +36,10 @@ export default function Home() {
                 Explore my portfolio and see how I can help your business
                 thrive.
               </p>
-              <div className="flex items-center mt-2 self-center justify-center gap-5
-              lg:self-center xxs:flex-col">
+              <div
+                className="flex items-center mt-2 self-center justify-center gap-5
+              lg:self-center xxs:flex-col"
+              >
                 <Link
                   target={"_blank"}
                   href="/CV.pdf"
