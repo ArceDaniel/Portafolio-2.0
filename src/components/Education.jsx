@@ -4,10 +4,10 @@ import LiIcons from "./LiIcons";
 
 const Educations = [
   {
-    type: "Azure Developer (AZ-204)",
+    type: "Azure Developer (AZ-900)",
     time: "2023 - Present",
     place: "Junior Achievement",
-    info: "Developing Solutions for Microsoft Azure.",
+    info: "Microsoft Azure Fundamentals.",
   },
   {
     type: "Full Stack Web Developer",
